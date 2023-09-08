@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Reservas de Hotel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Sistema de Reservas de Hotel</h1>
+    </header>
+    <main>
+        <div class="hotel-info">
+            <h2>Informações do Hotel</h2>
+            <p>Nome do Hotel: Hotel Luxo</p>
+            <p>Endereço: 123 Rua Principal</p>
+        </div>
+
+        <div class="quartos-info">
+            <h2>Informações dos Quartos</h2>
+            <ul>
+                <li>Quarto Luxo - Preço: $200 por noite</li>
+                <li>Quarto Padrão - Preço: $100 por noite</li>
+            </ul>
+        </div>
+
+        <div class="reserva-form">
+            <h2>Fazer uma Reserva</h2>
+            <form id="reservaForm">
+                <label for="nomeCliente">Nome do Cliente:</label>
+                <input type="text" id="nomeCliente" required>
+                <br>
+
+                <label for="tipoQuarto">Tipo de Quarto:</label>
+                <select id="tipoQuarto" required>
+                    <option value="Luxo">Luxo</option>
+                    <option value="Padrão">Padrão</option>
+                </select>
+                <br>
+
+                <label for="checkIn">Data de Check-In:</label>
+                <input type="date" id="checkIn" required>
+                <br>
+
+                <label for="checkOut">Data de Check-Out:</label>
+                <input type="date" id="checkOut" required>
+                <br>
+
+                <button type="button" onclick="fazerReserva()">Fazer Reserva</button>
+            </form>
+        </div>
+
+        <div class="reservas-info">
+            <h2>Reservas</h2>
+            <ul id="reservasList">
+            </ul>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
