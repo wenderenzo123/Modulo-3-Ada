@@ -1,62 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Reservas de Hotel</title>
-    <link rel="stylesheet" href="styles.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sistema de Reservas de Hotel</title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Sistema de Reservas de Hotel</h1>
-    </header>
-    <main>
-        <div class="hotel-info">
-            <h2>Informações do Hotel</h2>
-            <p>Nome do Hotel: Hotel Luxo</p>
-            <p>Endereço: 123 Rua Principal</p>
-        </div>
+	<header>
+		<h1 class="container h1 branco">Reservas - Hotel Luxo</h1>
+	</header>
 
-        <div class="quartos-info">
-            <h2>Informações dos Quartos</h2>
-            <ul>
-                <li>Quarto Luxo - Preço: $200 por noite</li>
-                <li>Quarto Padrão - Preço: $100 por noite</li>
-            </ul>
-        </div>
+	<main class="container">
+		<div class="informacoes-imagens">
+			<div class="hotel-info preto">
+				<h2 class="h2">Informações do Hotel</h2>
+				<h3 class="sub1">Nome do Hotel:</h3>
+				<p class="bod1"> Hotel Luxo</p>
+				<h3 class="sub1">Localização:</h3>
+				<p class="bod1">Avenida Principal 2023, Tecnologia - Liberdade - XY</p>
+			</div>
+			<div class="hotel-imgs">
+				<a class="bod2 preto" href="#reservar">Reservar agora</a>
+				<div class="imgs">
+					<img src="./img/img-1.png" alt="Quarto Luxo">
+					<img src="./img/img-2.png" alt="Quarto Padrão">
+					<img src="./img/img-3.png" alt="Banheiro Luxo">
+					<img src="./img/img-4.png" alt="Restaurante">
+					<img src="./img/img-5.png" alt="Banheiro Padrão">
+				</div>
+			</div>
+		</div>
+		<ul class="facilidades preto">
+			<li class="item">
+				<img src="./img/wifi.png" alt="Wifi">
+				<p class="bod2">Wifi Grátis</p>
+			</li>
+			<li class="item">
+				<img src="./img/cafe.png" alt="Café da Manhã">
+				<p class="bod2">Café da Manhã</p>
+			</li>
+			<li class="item">
+				<img src="./img/ar.png" alt="Ar Condicionado">
+				<p class="bod2">Ar Condicionado</p>
+			</li>
+			<li class="item">
+				<img src="./img/estacionamento.png" alt="Estacionamento">
+				<p class="bod2">Estacionamento</p>
+			</li>
+		</ul>
+		<div class="tex-complementar bod2 preto">
+			<p>Localizado no bairro dos teatros da Broadway e a poucos minutos da Centro, este hotel oferece serviços convenientes, como acesso gratuito à Internet sem fio de alta velocidade. O Hotel oferece um café da manhã continental gratuito todas as manhãs. Os hóspedes também irão apreciar café gratuito, bem como serviços de fotocópias e fax. Os quartos do Hotel dispõem de cafeteira, TV de tela plana e mesa de trabalho. Os hóspedes do Hotel encontrarão muitas opções de restaurantes e lojas nas proximidades. Columbus Circle fica a 1,4 km deste hotel e o Museu de Arte Moderna está a 1,6 km.</p>
+			<p>Os casais gostam particularmente do local - <strong>eles avaliaram 9,0 para uma viagem para duas pessoas.</strong></p>
+		</div>
+	</main>
 
-        <div class="reserva-form">
-            <h2>Fazer uma Reserva</h2>
-            <form id="reservaForm">
-                <label for="nomeCliente">Nome do Cliente:</label>
-                <input type="text" id="nomeCliente" required>
-                <br>
+	<section class="container quartos-info preto">
+		<h2 class="h2">Informações dos Quartos</h2>
+		<ul class="quartos">
+			<li class="quarto">
+				<img src="./img/quarto.png" alt="Quarto">
+				<div class="valor">
+					<h3 class="sub1">Quarto Luxo:</h3>
+					<p class="bod1">R$200,00 por noite</p>
+				</div>
+			</li>
+			<li class="quarto">
+				<img src="./img/quarto.png" alt="Quarto">
+				<div class="valor">
+					<h3 class="sub1">Quarto Padrão:</h3>
+					<p class="bod1">R$100,00 por noite</p>
+				</div>
+			</li>
+		</ul>
+	</section>
 
-                <label for="tipoQuarto">Tipo de Quarto:</label>
-                <select id="tipoQuarto" required>
-                    <option value="Luxo">Luxo</option>
-                    <option value="Padrão">Padrão</option>
-                </select>
-                <br>
+	<section class="container reserva-form preto" id="reservar">
+		<h2 class="h2">Fazer uma Reserva</h2>
+		<form class="form" id="reservaForm">
+			<div>
+				<label class="sub1" for="nomeCliente">Nome do Cliente:</label>
+				<input type="text" id="nomeCliente" required>
+			</div>
 
-                <label for="checkIn">Data de Check-In:</label>
-                <input type="date" id="checkIn" required>
-                <br>
+			<div>
+				<label class="sub1" for="tipoQuarto">Tipo de Quarto:</label>
+				<select id="tipoQuarto" required>
+						<option value="Luxo">Luxo</option>
+						<option value="Padrão">Padrão</option>
+				</select>
+			</div>
 
-                <label for="checkOut">Data de Check-Out:</label>
-                <input type="date" id="checkOut" required>
-                <br>
+			<div>
+				<label class="sub1" for="checkIn">Data de Check-In:</label>
+				<input type="date" id="checkIn" required>
+			</div>
 
-                <button type="button" onclick="fazerReserva()">Fazer Reserva</button>
-            </form>
-        </div>
+			<div>
+				<label class="sub1" for="checkOut">Data de Check-Out:</label>
+				<input type="date" id="checkOut" required>
+			</div>
 
-        <div class="reservas-info">
-            <h2>Reservas</h2>
-            <ul id="reservasList">
-            </ul>
-        </div>
-    </main>
-    <script src="script.js"></script>
+			<button type="button" onclick="fazerReserva()">Fazer Reserva</button>
+		</form>
+	</section>
+
+	<section class="container reservas-info">
+		<div class="tit">
+			<img src="./img/check.png" alt="Check">
+			<h2 class="h2 branco">Reserva Confirmada</h2>
+		</div>
+		<div class="informacoes-gerais branco">
+			<div class="col coluna1">
+				<div class="nome">
+					<h3 class="sub1">Reserva para</h3>
+					<p class="bod1">Nome</p>
+				</div>
+				<div class="quarto">
+					<h3 class="sub1">Quarto</h3>
+					<p class="bod1">Quarto X</p>
+				</div>
+				<div class="data">
+					<h3 class="sub1">Data de</h3>
+					<p class="bod1">00/00/0000<br>até 00/00/0000</p>
+				</div>
+			</div>
+			<div class="col coluna2">
+				<div class="nome-hotel">
+					<h3 class="sub1">Nome do Hotel:</h3>
+					<p class="bod1">Hotel Luxo</p>
+				</div>
+				<div class="localizacao">
+					<h3 class="sub1">Localização:</h3>
+					<p class="bod1">Avenida Principal 2023, Tecnologia - Liberdade - XY</p>
+				</div>
+			</div>
+			<div class="col coluna3">
+				<div class="valor">
+					<h3 class="sub1">Valor Total:</h3>
+					<p class="bod1">R$2020,00*</p>
+				</div>
+				<div class="infos-valor">
+					<p class="def">* Valor a ser pago na recepção do hotel ao realizar o check-in.</p>
+				</div>
+			</div>
+		</div>
+		<ul class="branco" id="reservasList">
+		</ul>
+	</section>
+	<script src="script.js"></script>
 </body>
 </html>
