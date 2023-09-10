@@ -99,12 +99,24 @@ var Hotel = /** @class */ (function () {
     };
     return Hotel;
 }());
+
+function mostraReserva() {
+    var container = document.getElementById("reserva-conf")
+
+    container.style.visibility = 'visible';
+
+}
+
 // Função para fazer reserva a partir do formulário HTML
 function fazerReserva() {
     var nomeCliente = document.getElementById("nomeCliente").value;
     var tipoQuarto = document.getElementById("tipoQuarto").value;
     var checkIn = new Date(document.getElementById("checkIn").value);
     var checkOut = new Date(document.getElementById("checkOut").value);
+    var btn = document.querySelector("button")
+
+    btn.addEventListener('click', mostraReserva);
+
     // Crie uma instância do Hotel e dos quartos aqui
     var quarto1 = new QuartoLuxo(101);
     var quarto2 = new QuartoLuxo(102);

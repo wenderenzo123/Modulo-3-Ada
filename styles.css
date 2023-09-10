@@ -248,6 +248,7 @@ main .tex-complementar p + p {
   padding-top: 6.5rem;
   padding-bottom: 6.5rem;
   background-color: var(--preto);
+  visibility: hidden;
 }
 
 .reservas-info .tit {
