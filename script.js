@@ -101,9 +101,15 @@ var Hotel = /** @class */ (function () {
 }());
 
 function mostraReserva() {
-    var container = document.getElementById("reserva-conf")
+    var container = document.getElementById("reserva-conf");
+    var nome = document.getElementById("nomeCli");
+    var quartoEscolhido = document.getElementById("quartoEscolhido");
+    var data = document.getElementById("datas");
 
     container.style.visibility = 'visible';
+    nome.innerHTML = nomeCliente.value;
+    quartoEscolhido.innerHTML = tipoQuarto.value;
+    data.innerHTML = checkIn.value + ' até ' + checkOut.value
 
 }
 
