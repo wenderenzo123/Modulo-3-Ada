@@ -8,6 +8,10 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap" rel="stylesheet">
+	<script defer>var exports = {};</script>
+	<script type="module" src="src/Reserva.js" defer></script>
+	<script type="module" src="src/Quartos.js" defer></script>
+	<script type="module" src="src/Hotel.js" defer></script>
 </head>
 <body>
 	<header>
@@ -104,7 +108,7 @@
 				<input type="date" id="checkOut" required>
 			</div>
 
-			<button type="button" onclick="fazerReserva()">Fazer Reserva</button>
+			<button type="button" id="botaoReserva">Fazer Reserva</button>
 		</form>
 	</section>
 
@@ -151,6 +155,5 @@
 		<ul class="branco" id="reservasList">
 		</ul>
 	</section>
-	<script src="script.js"></script>
 </body>
 </html>
