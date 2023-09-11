@@ -135,11 +135,7 @@ function fazerReserva() {
     var reservasList = document.getElementById("reservasList");
     var reservaItem = document.createElement("li");
     reservaItem.textContent = "Reserva para ".concat(nomeCliente, " (").concat(tipoQuarto, ") de ").concat(checkIn.toDateString(), " a ").concat(checkOut.toDateString());
-
-    // Selecione a tag <p> pelo elemento pai (por exemplo, pelo ID do elemento pai)
     var elementoPai = document.getElementById("valor");
-    
-    // Substitua o valor de 2020 com o novo preço
     elementoPai.innerHTML = "R$ " + hotel.fazerReserva(nomeCliente, checkIn, checkOut, tipoQuarto).calcularPrecoDiarias() + ",00";
     
     reservasList === null || reservasList === void 0 ? void 0 : reservasList.appendChild(reservaItem);
