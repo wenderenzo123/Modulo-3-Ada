@@ -81,6 +81,7 @@ class Quarto {
             const reserva = new Reserva(cliente, quartoDisponivel, checkIn, checkOut);
             quartoDisponivel.reservar();
             console.log(`Reserva feita para ${cliente} no quarto ${quartoDisponivel.numero}.`);
+            console.log(`Valor total da reserva: R$ ${reserva.calcularPrecoDiarias()}`);
             return reserva;
         } else {
             console.log(`Não há quartos disponíveis do tipo ${tipoQuarto} para as datas selecionadas.`);
