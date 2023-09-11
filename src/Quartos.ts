@@ -4,7 +4,7 @@ export abstract class Quarto {
   private numero: number;
   protected tipo: string;
   private disponibilidade: boolean;
-  private reservas: Reserva[];
+  private reservas: Reserva[] = [];
 
   constructor(numero: number) {
     this.numero = numero;
@@ -17,11 +17,11 @@ export abstract class Quarto {
 
     for (let res of this.reservas) {
       let r = res.periodoReserva();
-      if (r[0] < dates[0]) {
-        if (r[1] > dates[0])
+      if (r[0] <= dates[0]) {
+        if (r[1] >= dates[0])
           return false;
       } else {
-        if (dates[1] > r[0])
+        if (dates[1] >= r[0])
           return false;
       }
     }

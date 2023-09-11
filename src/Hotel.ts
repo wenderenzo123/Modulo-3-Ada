@@ -20,14 +20,20 @@ class Hotel {
 
   fazerReserva(): void {
 
-    const nomeCliente = (document.getElementById("nomeCliente") as HTMLInputElement).value;
-    const tipoQuarto = (document.getElementById("tipoQuarto") as HTMLSelectElement).value;
-    const checkIn = new Date((document.getElementById("checkIn") as HTMLInputElement).value);
-    const checkOut = new Date((document.getElementById("checkOut") as HTMLInputElement).value);
+    //const nomeCliente = (document.getElementById("nomeCliente") as HTMLInputElement).value;
+    //const tipoQuarto = (document.getElementById("tipoQuarto") as HTMLSelectElement).value;
+    //const checkIn = new Date((document.getElementById("checkIn") as HTMLInputElement).value);
+    //const checkOut = new Date((document.getElementById("checkOut") as HTMLInputElement).value);
+
+    const nomeCliente = "João Júnior José";
+    const tipoQuarto = "Luxo";
+    const checkIn = new Date("2023-09-25");
+    const checkOut = new Date("2024-04-20");
 
     let quartosDisponiveis = this.encontraQuarto(tipoQuarto);
     if (quartosDisponiveis == null) {
-      alert(`Não há quartos disponíveis do tipo ${tipoQuarto}`);
+      //alert(`Não há quartos disponíveis do tipo ${tipoQuarto}`);
+      console.log(`Não há quartos disponíveis do tipo ${tipoQuarto}`);
       return
     }
 
@@ -42,14 +48,16 @@ class Hotel {
     }
 
     if (!reservado || reserva == undefined) {
-      alert(`Não há quartos disponíveis do tipo ${tipoQuarto} para as datas selecionadas`);
+      //alert(`Não há quartos disponíveis do tipo ${tipoQuarto} para as datas selecionadas`);
+      console.log(`Não há quartos disponíveis do tipo ${tipoQuarto} para as datas selecionadas`);
       return;
     }
 
-    const reservasList = document.getElementById("reservasList");
-    const reservaItem = document.createElement("li");
-    reservaItem.textContent = reserva.dadosReserva();
-    reservasList?.appendChild(reservaItem);
+    //const reservasList = document.getElementById("reservasList");
+    //const reservaItem = document.createElement("li");
+    //reservaItem.textContent = reserva.dadosReserva();
+    //reservasList?.appendChild(reservaItem);
+    console.log(reserva.dadosReserva());
 
   }
 
@@ -61,9 +69,13 @@ const quarto2 = new QuartoLuxo(102);
 const quarto3 = new QuartoPadrao(201);
 const quarto4 = new QuartoPadrao(202);
 const hotel = new Hotel("Hotel Luxo", [quarto1, quarto2, quarto3, quarto4]);
-const button = document.getElementById("botaoReserva");
+hotel.fazerReserva();
+hotel.fazerReserva();
+hotel.fazerReserva();
+
+/*const button = document.getElementById("botaoReserva");
 if (button !== null) {
   button.onclick = function() {
-   hotel.fazerReserva();
+    hotel.fazerReserva();
   };
-}
+}*/
