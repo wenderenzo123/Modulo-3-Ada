@@ -109,7 +109,7 @@ function mostraReserva() {
     container.style.visibility = 'visible';
     nome.innerHTML = nomeCliente.value;
     quartoEscolhido.innerHTML = tipoQuarto.value;
-    data.innerHTML = checkIn.value + ' até ' + checkOut.value
+    data.innerHTML = checkIn.value.replace(/(\d*)-(\d*)-(\d*).*/, '$3-$2-$1') + ' até ' + checkOut.value.replace(/(\d*)-(\d*)-(\d*).*/, '$3-$2-$1')
 
 }
 
